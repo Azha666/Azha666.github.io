@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://azha.fun</id>
+    <title>Azha&apos;s Blog</title>
+    <updated>2020-10-25T15:47:42.258Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="http://azha.fun"/>
+    <link rel="self" href="http://azha.fun/atom.xml"/>
+    <subtitle>平平无奇</subtitle>
+    <logo>http://azha.fun/images/avatar.png</logo>
+    <icon>http://azha.fun/favicon.ico</icon>
+    <rights>All rights reserved 2020, Azha&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[浅谈联邦学习]]></title>
+        <id>http://azha.fun/post/浅谈联邦学习/</id>
+        <link href="http://azha.fun/post/浅谈联邦学习/">
+        </link>
+        <updated>2020-10-15T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>在人工智能领域，传统的数据处理模式往往是一方收集数据，再转移到另一方进行处理、清洗并建模，最后把模型卖给第三方。但随着法规完善和监控愈加严格，如果数据离开收集方或者用户不清楚模型的具体用途，运营者都可能会触犯法律。数据是以孤岛的形式存在的，解决孤岛的直接方案就是把数据整合到一方进行处理。但是，现在这样做很可能是违法的，因为法律不允许运营者粗暴地进行数据聚合。如何合法地解决数据孤岛问题应该引起人工智能学者和从业者的深思，因为大数据面临的这个困境很可能就是导致人工智能下一个冬天的导火线。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在人工智能领域，传统的数据处理模式往往是一方收集数据，再转移到另一方进行处理、清洗并建模，最后把模型卖给第三方。但随着法规完善和监控愈加严格，如果数据离开收集方或者用户不清楚模型的具体用途，运营者都可能会触犯法律。数据是以孤岛的形式存在的，解决孤岛的直接方案就是把数据整合到一方进行处理。但是，现在这样做很可能是违法的，因为法律不允许运营者粗暴地进行数据聚合。如何合法地解决数据孤岛问题应该引起人工智能学者和从业者的深思，因为大数据面临的这个困境很可能就是导致人工智能下一个冬天的导火线。</p>
+<!--more-->
+<h2 id="人工智能时代浮现的问题">人工智能时代浮现的问题</h2>
+<h3 id="数据安全问题">数据安全问题</h3>
+<p>随着信息技术的快速发展，硬件设备和数据的广泛利用为人工智能发展提供了广阔的应用空间和广泛的应用条件。但从2014年以来，数据泄漏问题开始得到公众关注，每年都有大量数据隐私泄露事件发生，数据使用的合法性和使用界限开始成为各行业关心的问题。2018年5月25日，欧盟正式生效《通用数据保护条例》（General Data Protection Regulation，GDPR）。中国于2019年4月正式发布《互联网个人信息安全保护指南》、2017年起实施《中华人民共和国网络安全法》和《中华人民共和国民法总则》。法律条例对于人工智能传统的数据处理建模模式形成了极大挑战。在一个需要互联共享的信息共享环境下，如何在符合法律法规的用户数据隐私安全条件下，进行多方数据资源的利用，成为了各企业利用数据时中面临的重要问题。</p>
+<h3 id="数据孤岛问题">数据孤岛问题</h3>
+<p>人工智能领域，往往需要足量数据进行机器学习来产生良好的建模效果。”能否掌握足量优质的数据，决定了人工智能训练效果的优劣。在实际工业环境中，仅仅一家企业难以只利用自身数据推测用户多元化多平台的消费习惯。为了更精准的做出决策，需要充分利用信息资源。市场开始要求大规模数据平台使用多种情况下的最佳训练效果。然而许多企业训练方拥有的数据量不足，规模与质量不完备。数据来源不够，导致机器学习系统效果不理想。不同的网站、研究者、广告商和商业机构想要将彼此的数据汇总或者统一整理进行训练，传统的处理模式之一是将不同源数据整合，形成聚合数据库，虽然聚合数据库能实现对多个独立的数据库进行相互操作，但过程中存在各单元数据库的交互过程，面临着交互过程中的安全风险，无法保证隐私安全的后果。另外，实际情况下，数据源往往分布在企业和个人，相互独立隔阂，形成了一个个阻碍技术发展的“数据孤岛”。</p>
+<h2 id="联邦学习">联邦学习</h2>
+<p>联邦学习的提出是满足隐私保护和信息安全、“数据孤岛问题”的解决方案。联邦学习允许从跨数据所有者分布的数据中构建集合模型，提供了跨企业的数据使用方式和模型构建蓝图，适用于B2B和B2C等业务，可被广泛应用于各种领域，实现各个企业的自有数据不出本地，只通过加密机制下的参数交换，不违反数据隐私法规地建立优化机器学习模型。在保护数据隐私安全，合法合规要求前提下，达成机器学习效果的强化，将人工智能重点从以AI基础算法为中心转移到以保障安全隐私的大数据架构为中心。</p>
+<p>2016年，Google AI研究人员首次提出用于训练深度学习网络的联邦学习。谷歌尝试建立数百万安卓设备之间的联邦模型，用于移动设备分散数据训练，解决隐私保护问题。2019年2月，Google发布实现了全球首个产品级的超大规模移动端分布式机器学习系统，能够在数千万部手机的安卓键盘上运行联邦学习算法，谷歌的研究主要侧重于在移动终端上运行的联合平均算法。</p>
+<p>多个数据拥有方想要共同训练模型，传统做法是将数据整合到一方进行训练，但是这样无法保证数据隐私和传输过程的安全性。相对于以往的分布式机器学习方式，联邦学习具有以下特征：数据不脱离本地；参与者利用自身拥有的数据训练全局模型；每个参与方都参与学习过程；模型损失可控；训练过程中考虑隐私和安全。参与各方能够在不披露底层数据和底层数据的加密形态的前提下共建模型，使联邦学习成为未来安全多方机器学习的新曙光。</p>
+<h3 id="联邦学习的分类">联邦学习的分类</h3>
+<h4 id="从联合方式分类">从联合方式分类</h4>
+<p>联合方式上，可以将联邦学习分为单方和多方两种方式。单方联邦学习是指从一个实体进行分布式内容抓取和系统管理。模型以联合的方式训练在所有客户端设备中具有相同结构的数据上。大多数情况下每个数据点对于设备或用户唯一。例如，应用程序通过单方联邦学习为个人用户推荐音乐的推荐引擎。多方联邦学习则需要两个或多个组织或特许经营商组成联盟。在其各自的数据集上训练共享模型。例如，多家银行可以培训一种通用的强大欺诈检测模型，而无需相互分享敏感的客户数据。</p>
+<h4 id="从用户和用户特征结构分类">从用户和用户特征结构分类</h4>
+<p>参与各方的数据结构和参数通常相似但不必相同，根据不同的数据的特征分布形式，如同数据库原理中的数据特征分布状态，联邦学习又分为三种不同处理方式：横向、纵向和迁移。参与方们的数据集具有高度重叠的特征维度，样本重叠较小时，称为横向联邦学习。参与方们的数据集具有高度重叠的样本纬度，特征维度重叠较小时，使用方法称为纵向联邦学习。如果参与方们数据集在样本和特征维度上都没有足够的重叠，则使用联邦迁移学习。</p>
+<h3 id="隐私保护下的技术工具">隐私保护下的技术工具</h3>
+<p>参与方们在参与联邦学习的过程中需要使用工具来进行数据的隐私保护。联邦学习的主要的工具包括安全多方计算，同态加密，私密共享和差分隐私。参与方们可以利用安全多方计算保证信息层面的数据安全。安全多方计算成本较高，为降低数据传输成本，参与方们可能需要在降低对数据安全的要求来提高训练的效率。同态加密能够对所有数据进行加密处理，参与方们接收到的是密文，使攻击者无法推理出原始数据信息，保障数据层面的安全。在实际应用中，为了提高计算效率，参与方们一般采用半同态加密，半同态加密可以使用加法和乘法进行同态加密。差分隐私可以用于参与方本地数据信息安全的保护，通过在参与方各自的原始数据上不断加噪音来减弱任意一方数据对于整体数据的影响。其缺点在于牺牲训练效果，过多的噪音会降低模型训练的效果，参与方们在使用差分隐私时需要在数据安全和准确度上进行取舍。</p>
+<h3 id="联邦学习的现状和发展">联邦学习的现状和发展</h3>
+<h4 id="联邦学习的框架和标准化制定">联邦学习的框架和标准化制定</h4>
+<p>联邦学习的技术框架建设方面。谷歌首先提出开源的离散数据联邦学习应用框架TensorFlow Federated (TFF)。TensorFlow Federated主要支持利用如今数量众多的移动智能终端设备和边缘端计算设备的计算能力，保证数据不离开本地的同时训练本地机器学习模型，通过Google开发的Federated Averaging 算法，即使在较差的通信环境下，也能实现保密、高效、高质量的模型汇总和迭代流程，且移动端和边缘端用户体验上不做任何牺牲和妥协。目前Google已经将联邦学习应用在移动设备键盘输入预测上。</p>
+<p>在学术研究与行业应用上，腾讯发起的中国首家互联网银行——微众银行正在积极探索。在国际人工智能专家、微众银行首席人工智能官杨强教授带领下的AI 团队开源了首个联邦学习“FATE（FederatedAI Technology Enabler)” 工业框架，作为安全计算框架支持联合AI生态系统，该框架可以实现基于同态加密和多方计算的安全计算协议，在信贷风控、客户权益定价、监管科技等领域推出了相应的商用方案。微众银行与瑞士再保险公司达成合作，共同研究“联邦学习”在再保险领域的应用。在杨强教授担任标准制定工作组主席的带领下，微众银行发起“IEEE联邦学习标准项目”，成为国际上首个针对人工智能协同技术框架订立标准的项目，旨在共同制定联邦学习标准形式的具体形式和内容，达成行业合作，共同推动联邦学习在各行业领域的进一步发展。</p>
+<p>目前，联邦学习的国际标准化工作正在进行，随着 6月15日IEEE联邦学习基础架构与应用标准工作组的第二次会议在美国洛杉矶的召开。海内外13家来自科技、金融、教育、医疗等不同行业的知名研究机构及企业从多角度探讨联邦学习技术的应用案例，对联邦学习标准草案的制定提出建设性意见，该标准草案预计在一年内出台，意味着将为立法和监管提供更多技术依据。</p>
+<h4 id="国内联邦学习平台产业化建设">国内联邦学习平台产业化建设</h4>
+<p>联邦学习技术作为机器学习和数据结合的推动者，将推动各行业人工智能技术平台的应用发展，目前各企业已经开始在业务方面开展联邦学习在产业方面的技术平台建设工作。</p>
+<p>百度基于数据本地和云端隔离技术，采用安全数据融合以及多方联邦学习技术，推出“点石”数据安全融合及应用服务平台。提供安全数据集合、灵活建模、快速服务部署等服务，基于硬件隔离域、多方安全计算的技术能力，支持多场景的数据安全计算。“点石”利用安全方案解决数据打通难与应用成本高等问题。提供减少企业损失的风险识别，帮助企业有效识别在信用卡、贷款、在线支付等场景中的违约、欺诈等潜在风险，帮助企业对销售线索进行甄别与拓展，优化企业营销策略。“点石”的联邦学习应用场景主要是风险识别和营销分析。该平台与清华大学达成合作，利用联邦学习对接政府客户，帮助智慧城市建设。在风控模型建立方面，与狮桥公司合作，协同客户本地训练，结合大数据联合建模平台进行数据融合与分析建模。</p>
+<p>金融应用领域方面，平安集团的高科技内核——平安科技公司正在研发建立全球首个面向金融行业的联邦学习平台“蜂巢”。平安科技利用联邦学习技术，设计面向数据强监管的金融业多态多任务学习模型。“蜂巢”能够应用于多方信息的安全协作计算，满足银行和金融机构的风险评估、反洗钱、投顾、投研、信贷、保险和监管等多场景应用需求。减少人力成本和打通数据的成本，提高数据使用在机器学习过程中的转化率。平安科技将推动学界和工业界的积极探索，携手金融行业共同建立“联邦学习+互联网+监督”的联邦大数据平台，打破金融行业孤岛，联合各企业以及政府机构，进一步推动联邦学习在金融产业的快速发展。</p>
+<h4 id="联邦学习与物联网的融合">联邦学习与物联网的融合</h4>
+<p>物联网（IoT）生态环境中，联邦学习可以用于人工智能模型的分散训练。目前国内多家企业正在致力于研发联邦学习在物联网领域的应用解决方案。</p>
+<p>在通信分配应用方面，华为数字算法实验室利用联邦学习原理解决车联网中可靠低延迟通信的联合功率和资源分配问题，在概率排队延迟方面最小化车辆用户的网络功耗。利用联邦学习技术，华为数字算法实验室提出了一种分布式学习机制，车辆用户在道路单位的帮助下能够在本地学习网络范围队列，而不实时共享队列长度估计尾部分布。这种方法能高精度判断学习网络中的车联网队列分布，减少车载队列长度，优化资源配置。</p>
+<p>联想在去中心化人工智能和联邦学习的实际应用场景上，专注与硬件技术的结合，从各种来源聚合生成本地模型并允许物联网相互学习。每个边缘设备的数据独立用于学习创建本地模型。本地模型聚合将中央服务器转换为全局模型，再分发返回边缘设备，令所有边缘设备都可以从收集和处理的信息中受益，在不同场景下，利用联邦学习使物联网设备或传感器能够相互学习。联想正在与波兰云数据解决方案公司ByteLAKE合作，开展联邦学习和边缘计算环境系统构建。</p>
+<h4 id="对多方安全计算的积极探索">对多方安全计算的积极探索</h4>
+<p>在数据隐私保护的研究应用方面，基于多方安全计算技术，腾讯开展AI创新实践，推出“腾讯云数盾”。数盾以数据安全治理为核心,构建了可用于外部攻击防护、数据交换保护、内部防泄露等全流程的数据安全保护方案,用于帮助企业数据安全建设。数盾通过使用匿名化、差分隐私、安全多方计算架构等方式,在数据使用安全的基础上,平衡隐私保护与数据挖掘价值，符合对于数据使用和共享环境中的合规需求。</p>
+<p>阿里巴巴于四年前开始研究共享学习技术，研发蚂蚁金服共享学习平台，主要思想和联邦学习相同，基于数据安全和隐私保护，在多个参与方之间通过共享加密数据或加密机制下的参数交换与优化，进行机器学习，作为虚拟的共享模型的产品平台。蚂蚁金服共享学习平台本着数据共享建模方案不泄露用户隐私且符合数据安全保护的原则实现了数据的多方协同和授权共享，得到更准确高效的模型和决策，进一步释放数据价值。</p>
+<h3 id="联邦学习的未来">联邦学习的未来</h3>
+<p>对想要进行联合机器学习的各参与方，联邦学习具有保护隐私和多方本地数据安全的极大优势。避免集中式存储数据，安全合规地从多源不互通的数据中创造新的价值，充分利用各方数据资源，优化机器学习训练结果，学习参与方可以在联合形成协同合作的联邦大数据环境，形成联邦学习生态。联邦学习生态可以视为一个多种数据来源合作产生的，基于联邦学习原理协同规范的，用于联邦学习过程的无共享多方数据集群环境。用户、方案提供商、服务商、运营商以及生态链上游厂商融入到一个大环境，提供优化服务，真正达到联邦学习的资源融合作用。对金融、互联网、通信、零售、交通运输、工业生产等行业提供计算服务支持。我们可以从以下四方面窥探联邦学习的未来。</p>
+<p><strong>丰富的数据资源是联邦学习最大的金矿</strong>。原本分散在各规模企业的数据，通过联邦学习生态达成，可以发挥其自身作用，有了更好的用武之地。例如在精准营销方面，通过机器学习建模，把顾客群体细分，对每个群体，量体裁衣地采取相应对策。利用整合各方有用资源，构造更好的机器学习效果，以此产生利益价值。利用“联邦学习+人工智能”真正的赋能大数据并反哺个人和企业业务，用数据和科学提升业务效益。</p>
+<p>**打破传统企业机构的数据边界，利用联邦学习提升智能化效果。**改变过去商务智能和政府仅仅依靠机构内部数据的局面。协同各企业机构，达成优化合作，降低各机构间的交易摩擦成本和数据风险，提升机器学习的准确性和更新的及时性。在智慧城市、智慧医疗、智慧金融、企业数据联盟等方面提出新的使用方向。</p>
+<p>**更了解市场，发现用户需求并将联邦学习产业应用落地。**从市场业务挖掘数据使用场景，找出联邦学习在市场环境中的使用场景及应用范围，结合目前个人和机构的使用需求，利用联邦学习环境，提供丰富的资源，强化机器学习效果，辅助加速各产业智能化。</p>
+<p>**达成各行业联手，共建全行业的联邦学习生态。**联邦学习的出现已经开始改变大数据在各行各业的应用方式，联邦大数据生态的构建也离不开学界和工业界的共同探索和推动，使用联邦学习技术的各方应当携手，联合制定数据联邦行业规范，促成多方联邦数据协议，达成标准化、协同化、规范化的联邦学习环境。</p>
+<p>在信息流通日益渗透到企业和个人的今天，联邦学习将逐渐成为金融、保险、投资、医疗等众多行业领域实现商业价值和隐私安全保护的最佳途径，其应用将在各行业全面展开，联邦学习的新纪元已经到来。</p>
+<h2 id="参考文献">参考文献</h2>
+<p><a href="https://www.secrss.com/articles/12695">数据隐私保护新曙光：联邦学习的机遇、挑战与未来</a></p>
+<p><a href="https://aisp-1251170195.cos.ap-hongkong.myqcloud.com/wp-content/uploads/pdf/%E8%81%94%E9%82%A6%E5%AD%A6%E4%B9%A0%E7%99%BD%E7%9A%AE%E4%B9%A6_v2.0.pdf">联邦学习白皮书_v2.0</a></p>
+<p><a href="https://github.com/tao-shen/Federated-Learning-FAQ">联邦学习FAQ</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[搭建用于无人驾驶强化学习的环境]]></title>
+        <id>http://azha.fun/post/搭建用于无人驾驶强化学习的环境/</id>
+        <link href="http://azha.fun/post/搭建用于无人驾驶强化学习的环境/">
+        </link>
+        <updated>2020-04-04T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>本文整理了在Ubuntu 16.04操作系统环境下，搭建适用于TORCS(The Open Racing Car Simulator)无人驾驶仿真平台的强化学习环境。包括Ubuntu 16.04更换NVIDIA显卡驱动、安装CUDA、cuDNN、TensorFlow GPU加速版本以及Gym-TORCS.</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本文整理了在Ubuntu 16.04操作系统环境下，搭建适用于TORCS(The Open Racing Car Simulator)无人驾驶仿真平台的强化学习环境。包括Ubuntu 16.04更换NVIDIA显卡驱动、安装CUDA、cuDNN、TensorFlow GPU加速版本以及Gym-TORCS.</p>
+<!--more-->
+<p>环境：Linux Ubuntu 16.04 LTS</p>
+<h3 id="安装nvidia驱动">安装NVIDIA驱动</h3>
+<h4 id="下载驱动程序">下载驱动程序</h4>
+<p>在<a href="http://www.nvidia.cn/Download/index.aspx?lang=cn">英伟达官网下载链接</a>选择电脑显卡以及操作系统，下载合适的显卡驱动文件。</p>
+<figure data-type="image" tabindex="1"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E35/E35_02.png" alt="" loading="lazy"></figure>
+<h4 id="禁用nouveau第三方驱动">禁用nouveau第三方驱动</h4>
+<p>i. 打开编辑配置文件： <code>sudo gedit /etc/modprobe.d/blacklist.conf</code></p>
+<p>ii. 在最后一行添加：<code>blacklist nouveau</code></p>
+<p>iii. 改好后执行命令：<code>sudo update-initramfs -u</code></p>
+<p>iv. 重启使之生效：<code>reboot</code></p>
+<h3 id="安装驱动">安装驱动</h3>
+<p>重启后按Ctrl+Alt+F1 进入命令行界面</p>
+<p>执行命令：<code>lsmod | grep nouveau</code></p>
+<p>禁用X服务：<code>sudo /etc/init.d/lightdm stop</code>（或者：<code>sudo service lightdm stop</code>）</p>
+<p>给驱动run文件赋予可执行权限：<code>sudo chmod a+x NVIDIA-Linux-x86_64-440.64.run</code>(此处文件名称根据下载的驱动文件名填写）</p>
+<p>安装：<code>sudo ./NVIDIA-Linux-x86_64-440.64.run -no-opengl-files</code></p>
+<blockquote>
+<p>–no-opengl-files 只安装驱动文件，不安装OpenGL文件。这个参数最重要<br>
+–no-x-check 安装驱动时不检查X服务<br>
+–no-nouveau-check 安装驱动时不检查nouveau<br>
+后面两个参数可不加。</p>
+</blockquote>
+<p>开启X服务：<code>sudo /etc/init.d/lightdm start</code>（或者：<code>sudo service lightdm start</code>）</p>
+<p>重启，没有问题，输入命令：<code>nvidia-smi</code></p>
+<p>如果出现了驱动版本就表示安装成功了。</p>
+<h2 id="安装cudatoolkit-90">安装CUDAToolkit 9.0</h2>
+<p><a href="https://developer.nvidia.com/cuda-90-download-archive?target_os=Linux&amp;target_arch=x86_64&amp;target_distro=Ubuntu&amp;target_version=1604&amp;target_type=deblocal">CUDA9.0下载地址</a></p>
+<figure data-type="image" tabindex="2"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E35/E35_03.png" alt="" loading="lazy"></figure>
+<p>打开终端  <strong>cd 进入存放CUDA安装包的文件夹中</strong>，依次输入下面的命令：</p>
+<pre><code class="language-bash">sudo dpkg -i cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64.deb
+sudo apt-key add /var/cuda-repo-9-0-local/7fa2af80.pub
+sudo apt update
+sudo apt install cuda
+</code></pre>
+<p>CUDA完成安装之后，还需要添加环境变量，打开终端，输入下面的命令：</p>
+<pre><code class="language-bash">export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
+# 如果是64位系统，输入：
+export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+# 如果是32位系统，输入：
+export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+</code></pre>
+<p>上述过程完成了整个的CUDA9.0的安装</p>
+<h2 id="安装cudnn-v70">安装cuDNN v7.0</h2>
+<p><a href="https://developer.nvidia.com/rdp/cudnn-download">cuDNN v7.0下载地址</a></p>
+<figure data-type="image" tabindex="3"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E35/E35_04.png" alt="" loading="lazy"></figure>
+<p>勾选I Agree To the Terms of the cuDNN Software License Agreement，一定要选择上<strong>适用于CUDA 9.0的正确版本</strong>！！！！</p>
+<p>打开终端  <strong>cd 进入存放cuDNN安装包的文件夹中</strong>，输入以下命令：</p>
+<p><code>sudo dpkg -i libcudnn7_7.6.5.32-1+cuda9.0_amd64.deb</code></p>
+<p><strong>注意</strong>，上述命令中的可能会由于cudnn版本的细微差异而不同，请根据自己下载的cuDNN版本修改命令。之后等待完成cuDNN的安装。</p>
+<h2 id="安装tensorflow-gpu版本">安装Tensorflow-GPU版本</h2>
+<p>GPU相比于CPU，在运算速度上有很大的优势，这也是本文推荐安装GPU版本的原因。</p>
+<p>Tensorflow总共有4中安装方式，在这里，我们使用Google官方推荐的安装方式：Virtualenv，创建一个虚拟Python开发环境。</p>
+<h3 id="安装pip和virtualenv">安装pip和Virtualenv</h3>
+<p>由于Python 2.7版本已于2020年1月1日终止维护，这里推荐使用Python 3.x版本进行开发。</p>
+<p>打开终端<br>
+如果使用Python 2.7的版本，输入<code>sudo apt install python-pip python-dev python-virtualenv</code><br>
+如果使用Python 3.x的版本，输入<code>sudo apt install python3-pip python3-dev python-virtualenv</code></p>
+<h3 id="创造一个虚拟的python开发环境">创造一个虚拟的Python开发环境</h3>
+<p>第一步如果选择Python 2.7版本，终端输入：<code>virtualenv --system-site-packages ~/tensorflow</code><br>
+第一步如果选择Python 3.x版本，终端输入：<code>virtualenv --system-site-packages -p python3 ~/tensorflow</code><br>
+注意，~/tensorflow是自己选择的位置并创建的目录，可以自行选择其他的位置和命名。创建完成之后，会在用户文件夹目录下看到多出的tensorflow文件夹</p>
+<h3 id="激活虚拟环境">激活虚拟环境</h3>
+<p>打开终端输入：<code>source ~/tensorflow/bin/activate</code></p>
+<p>命令执行之后会在命令前出现  <strong>(tensorflow)</strong> 字样，代表虚拟环境已激活，接下来便可以在虚拟环境中进行操作。</p>
+<p>保证pip的版本不低于8.1，在虚拟环境中输入：<code>easy_install -U pip</code></p>
+<h3 id="安装tersorflow-gpu版本">安装tersorflow-gpu版本</h3>
+<p>Python 2.7版本：<code>pip install --upgrade tensorflow-gpu</code><br>
+Python 3.x版本：<code>python -m pip install --upgrade tensorflow-gpu</code><br>
+经过这一步骤之后，tensorflow就安装完成了。</p>
+<p>如果pip安装速度慢，可参考本博客之前的文章<a href="http://azha666.github.io/20120/04/02/Ubuntu%2016.04%20%E6%9B%B4%E6%8D%A2%E5%AE%89%E8%A3%85%E6%BA%90%E5%90%88%E9%9B%86/">Ubuntu 16.04 更换安装源合集</a>，更换pip源。</p>
+<p>有些IDE 会自动检测tensorflow创建的虚拟环境，不必在终端中单独开启或者关闭，比如pycharm等。</p>
+<h2 id="安装gym-torcs">安装Gym-TORCS</h2>
+<h3 id="安装相关依赖包">安装相关依赖包</h3>
+<p>打开终端，输入命令</p>
+<pre><code class="language-bash">pip install opencv-python
+sudo apt install xautomation
+pip install numpy
+pip install gym
+</code></pre>
+<h3 id="安装gym-torcs-2">安装Gym-TORCS</h3>
+<p>下载<a href="https://github.com/ugo-nama-kun/gym_torcs">Gym-TORCS源码</a>.此处若git clone速度慢，可通过第三方下载软件下载源码zip包，或者参考本博客之前的文章<a href="http://azha666.github.io/2018/09/20/%E6%89%93%E7%A0%B4Git%20%E6%93%8D%E4%BD%9C%E7%9A%84%E9%80%9F%E5%BA%A6%E9%99%90%E5%88%B6/">打破Git 操作的速度限制</a>，为git操作添加网络代理。</p>
+<p>将gym_torcs/vtorcs-RL-color/src/modules/simu/simuv2/simu.cpp中第64行替换为</p>
+<p><code>if (isnan((float)(car-&gt;ctrl-&gt;gear)) || isinf(((float)(car-&gt;ctrl-&gt;gear)))) car-&gt;ctrl-&gt;gear = 0;</code></p>
+<p>即转换两个数据类型为float，否则，下一步make的时候可能会出现error，安装失败。（此处参考网上教程，为尝试过不修改文件的方法）</p>
+<p>打开终端，<strong>cd 到 gym_torcs/vtorcs-Rl-color目录</strong>，执行以下命令：</p>
+<pre><code class="language-bash">sudo apt-get install libglib2.0-dev  libgl1-mesa-dev libglu1-mesa-dev  freeglut3-dev  libplib-dev libopenal-dev libalut-dev libxi-dev libxmu-dev libxrender-dev  libxrandr-dev libpng12-dev 
+./configure
+make
+sudo make install
+sudo make datainstall
+torcs
+</code></pre>
+<figure data-type="image" tabindex="4"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E35/E35_05.png" alt="" loading="lazy"></figure>
+<p>至此完成无人驾驶强化学习环境的搭建！</p>
+<h2 id="参考文献">参考文献</h2>
+<p><a href="https://blog.csdn.net/u014797226/article/details/79626693">Ubuntu 16.04安装NVIDIA驱动</a></p>
+<p><a href="https://blog.csdn.net/qq_35976351/article/details/79325476">Ubuntu + CUDA9.0 + tensorflow-gpu 安装过程</a></p>
+<p><a href="https://www.jianshu.com/p/a3432c0e1ef2">使用Keras和DDPG玩赛车游戏（自动驾驶）</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Ubuntu 16.04 更换安装源合集]]></title>
+        <id>http://azha.fun/post/Ubuntu 16.04 更换安装源合集/</id>
+        <link href="http://azha.fun/post/Ubuntu 16.04 更换安装源合集/">
+        </link>
+        <updated>2020-04-01T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>每当需要通过命令行下载一些软件包的时候，下载的速度往往不那么如意，我们可以通过更换到国内安装源以提升下载和安装的速度，以此博文整理在Ubuntu 16.04 操作系统下一些常用的更换安装源的操作。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>每当需要通过命令行下载一些软件包的时候，下载的速度往往不那么如意，我们可以通过更换到国内安装源以提升下载和安装的速度，以此博文整理在Ubuntu 16.04 操作系统下一些常用的更换安装源的操作。</p>
+<!--more-->
+<p>环境：Linux Ubuntu 16.04 LTS<br>
+相关：<a href="http://azha666.github.io/2017/09/06/Ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8Python/">Ubuntu系统下开始使用Python</a></p>
+<h2 id="更换apt-源">更换apt 源</h2>
+<p>这里我们以阿里云的apt 源为例，其他apt 源的更换也同理。</p>
+<ol>
+<li>
+<p>找到并备份配置文件sources.list<br>
+我们需要对apt源的配置文件进行修改 。进入/etc/apt目录，我们可以看到sources.list文件。<br>
+为了保证安全，我们在修改前先把sources.list文件进行备份<br>
+<code>$ sudo cp sources.list sources.list.bak</code></p>
+</li>
+<li>
+<p>修改配置文件sources.list<br>
+安装vim编辑工具<br>
+<code>$ sudo apt-get install vim</code><br>
+使用vim编辑sources.list文件<br>
+<code>$ sudo vim /etc/apt/sources.list</code></p>
+</li>
+</ol>
+<p>将文件内容替换为阿里源Ubunt16.04（xenial）版本：</p>
+<pre><code>deb-src http://archive.ubuntu.com/ubuntu xenial main restricted 
+deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial main restricted multiverse universe 
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted multiverse universe 
+deb http://mirrors.aliyun.com/ubuntu/ xenial universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-updates multiverse
+deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse 
+deb http://archive.canonical.com/ubuntu xenial partner
+deb-src http://archive.canonical.com/ubuntu xenial partner
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted
+deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted multiverse universe 
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe
+deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse
+</code></pre>
+<ol start="3">
+<li>更新源 更新软件</li>
+</ol>
+<pre><code>$ sudo apt-get update
+$ sudo apt-get upgrade
+</code></pre>
+<h2 id="更换pip-源">更换pip 源</h2>
+<ol>
+<li>创建pip文件夹与配置文件并打开</li>
+</ol>
+<pre><code>$ mkdir ~/.pip
+$ vim ~/.pip/pip.conf
+</code></pre>
+<ol start="2">
+<li>输入以下信息</li>
+</ol>
+<pre><code>[global]
+
+index-url = http://mirrors.aliyun.com/pypi/simple/
+
+[install]
+
+trusted-host = mirrors.aliyun.com
+</code></pre>
+<p>保存退出即可。</p>
+<p>除了阿里云的源，还可以替换为下面的源，同理：</p>
+<p>清华：https://pypi.tuna.tsinghua.edu.cn/simple</p>
+<p>中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/</p>
+<p>豆瓣：http://pypi.douban.com/simple/</p>
+<h2 id="参考文献">参考文献</h2>
+<p><a href="https://www.jianshu.com/p/a8472f424a12">ubuntu 16.04更换apt-get、pip源</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Win 10环境安装Ubuntu 16.04双系统]]></title>
+        <id>http://azha.fun/post/Win 10环境安装Ubuntu 16.04双系统/</id>
+        <link href="http://azha.fun/post/Win 10环境安装Ubuntu 16.04双系统/">
+        </link>
+        <updated>2020-03-31T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>在学习的过程中，难免会遇到需要安装双系统的情况，因为之前安装的双系统版本过于新，导致很多软件不能得到很好的支持，于是卸载了原有版本的双系统之后，重新安装了一遍双系统，并以此博文记录，避免之后再次踩坑。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在学习的过程中，难免会遇到需要安装双系统的情况，因为之前安装的双系统版本过于新，导致很多软件不能得到很好的支持，于是卸载了原有版本的双系统之后，重新安装了一遍双系统，并以此博文记录，避免之后再次踩坑。</p>
+<!--more-->
+<p>此文适用于MBR（传统） Windows 10 版本下安装Ubuntu 16.04 双系统，其他情况下仅供参考。</p>
+<h2 id="准备">准备</h2>
+<h3 id="准备工具">准备工具</h3>
+<p>➢U盘一个（推荐8GB以上，提前备份U盘，后面操作要格式化U盘）</p>
+<p>➢Ubuntu 16.04 LTS 镜像<br>
+<a href="http://www.ubuntu.com/download/desktop">镜像下载地址</a><br>
+<a href="http://cn.ubuntu.com/download/">Ubuntu中国下载地址</a></p>
+<p>➢启动U盘制作软件<br>
+<a href="http://rufus.ie/">rufus</a><br>
+<a href="http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows">Ubuntu官网提供的USB启动盘制作教程</a></p>
+<p>➢ 系统引导软件[EasyBCD](<a href="https://neosmart.net/EasyBCD/">https://neosmart.net/EasyBCD/</a></p>
+<h3 id="分区">分区</h3>
+<p>分出来一个磁盘，用于安装Ubuntu，我的电脑配置128GB SSD和1TB HDD，我在SSD中压缩出了512MB空间，在HDD中压缩出了250GB空间，具体可根据条件自行调节。具体分区步骤，请参照<a href="http://jingyan.baidu.com/article/425e69e6bbd0c7be14fc164a.html">百度经验</a></p>
+<h3 id="制作启动u盘">制作启动U盘</h3>
+<ol>
+<li>运行下载好的rufus</li>
+</ol>
+<figure data-type="image" tabindex="1"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_02.png" alt="" loading="lazy"></figure>
+<ol start="2">
+<li>选择Ubuntu 镜像文件，找到电脑中Ubuntu 16.04 的镜像位置，选择即可</li>
+</ol>
+<figure data-type="image" tabindex="2"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_03.png" alt="" loading="lazy"></figure>
+<ol start="3">
+<li>点击开始，弹窗默认一路确定即可</li>
+</ol>
+<figure data-type="image" tabindex="3"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_04.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_05.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_06.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_07.png" alt="" loading="lazy"></figure>
+<ol start="4">
+<li>将镜像写入U盘了</li>
+</ol>
+<figure data-type="image" tabindex="7"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_08.png" alt="" loading="lazy"></figure>
+<ol start="5">
+<li>成功，点击<strong>关闭</strong></li>
+</ol>
+<figure data-type="image" tabindex="8"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_09.png" alt="" loading="lazy"></figure>
+<h2 id="安装">安装</h2>
+<ol>
+<li>从U盘启动<br>
+将制作好的USB启动盘插在电脑上，选择启动方式为USB启动。(如果你的电脑有两个USB启动选项可供选择，可能一个带有“UEFI”,另一个没有“UEFI”，请选择没有“UEFI”的，选带有“UEFI”的可能会出现问题)</li>
+</ol>
+<p>**注意：**选择USB启动可能需要到BIOS界面进行相关操作，请根据不同电脑自行查找资料</p>
+<ol start="2">
+<li>欢迎界面<br>
+选择了U盘启动后，等待一小会儿，会出现如下“欢迎”界面（通过左侧的语言栏选择中文），选择中文后，点击“安装Ubuntu”</li>
+</ol>
+<figure data-type="image" tabindex="9"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_10.png" alt="" loading="lazy"></figure>
+<ol start="3">
+<li>准备安装<br>
+接下来会进入“准备安装Ubuntu”界面：根据需求勾选选项（如需下载内容则需要联网）</li>
+</ol>
+<figure data-type="image" tabindex="10"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_11.png" alt="" loading="lazy"></figure>
+<ol start="4">
+<li>选择安装类型<br>
+上步之后进入“安装类型”界面，选择“其他选项”</li>
+</ol>
+<figure data-type="image" tabindex="11"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_12.png" alt="" loading="lazy"></figure>
+<ol start="5">
+<li>安装位置的选择及磁盘分区<br>
+选择安装位置和磁盘分区是十分重要的环节！！！！</li>
+</ol>
+<p>选中“空闲”区域，核对一下大小对不对，点击左下角的加号**+<strong>创建分区，若创建错了就点减号</strong>-**删除。</p>
+<p>分区推荐分配方案：</p>
+<ul>
+<li>/boot  200 MB ； 引导系统存放的空间，实际需求大约 100 ~ 200MB，如果有多个内核/启动镜像同时存在，建议分配 200 或者 300 MB，我的选择是512MB。</li>
+</ul>
+<figure data-type="image" tabindex="12"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_13.png" alt="" loading="lazy"></figure>
+<ul>
+<li>swap  [不定] ；相当于虚拟内存，在拥有不足 512 MB 内存的机器上，通常为 swap 分区分配2倍内存大小的空间。如果有更大的内存（大于 1024 MB），可以分配较少的空间甚至不需要swap 分区，我选择的空间大小与电脑物理内存差不多。</li>
+</ul>
+<figure data-type="image" tabindex="13"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_14.png" alt="" loading="lazy"></figure>
+<ul>
+<li>/  15-20 GB ； 存放安装软件的存储空间，15-20 GB 对于大多数用户来说是一个比较合适的取值，我的选择是20GB。</li>
+</ul>
+<figure data-type="image" tabindex="14"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_15.png" alt="" loading="lazy"></figure>
+<ul>
+<li>/home  [不定] ； 通常用于存放用户数据，下载的文件和媒体文件。在桌面系统中，/home 通常是最大的文件系统，我的选择是分配所剩下的所有空间。</li>
+</ul>
+<figure data-type="image" tabindex="15"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_16.png" alt="" loading="lazy"></figure>
+<p>**核心步骤：&quot;安装启动引导器的设备&quot; 选择/boot 对应的分区。**此处不要使用默认项，默认项将从Ubuntu的grub来启动你的Windows的，如果Ubuntu系统瘫痪了，Windows将难以启动。</p>
+<figure data-type="image" tabindex="16"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_17.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="17"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_18.png" alt="" loading="lazy"></figure>
+<p>我遇到了格式化Ubuntu所在磁盘后，开机提示错误，连Windows都进不去。错误代码如下：</p>
+<pre><code>error: no such partition
+Entering rescue mode...
+grub rescue&gt;
+</code></pre>
+<p>解决方法如下：<br>
+i. 插入启动盘（U盘或者时光盘），开机从USB启动盘启动<br>
+ii. 选择修复计算机——疑难解答——命令提示符<br>
+iii. 输入命令：<code>bootsect/nt60 C：</code> 看到成功提示后，再输入命令：<code>bootrec/fixmbr</code> 成功后重启即可正常进入系统.</p>
+<ol start="6">
+<li>选择地域<br>
+默认上海，直接&quot;继续&quot;就行，安装完之后可以设置精确的位置</li>
+</ol>
+<figure data-type="image" tabindex="18"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_19.png" alt="" loading="lazy"></figure>
+<ol start="7">
+<li>选择键盘<br>
+根据个人情况选择</li>
+</ol>
+<figure data-type="image" tabindex="19"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_20.png" alt="" loading="lazy"></figure>
+<ol start="8">
+<li>设置用户</li>
+</ol>
+<figure data-type="image" tabindex="20"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_21.png" alt="" loading="lazy"></figure>
+<p>设置完之后，选择&quot;继续&quot;</p>
+<ol start="9">
+<li>安装，静候</li>
+</ol>
+<figure data-type="image" tabindex="21"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_22.png" alt="" loading="lazy"></figure>
+<ol start="10">
+<li>安装成功，重启</li>
+</ol>
+<figure data-type="image" tabindex="22"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_23.png" alt="" loading="lazy"></figure>
+<p>重启之后，将没有Ubuntu的启动项，直接进入Windows系统，设置启动项。</p>
+<ol start="11">
+<li>设置启动项</li>
+</ol>
+<p>进入Windows 后，安装 EasyBCD ，之后运行</p>
+<figure data-type="image" tabindex="23"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_24.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="24"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_25.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="25"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_26.png" alt="" loading="lazy"></figure>
+<p>重启，将会出现Ubuntu启动项，点击刚添加的启动项，进入Ubuntu grub界面</p>
+<p>如需屏蔽grub等待界面，可通过如下操作设置<br>
+i. 编辑grub文件<code>sudo vim /etc/default/grub</code><br>
+ii. 注释掉<code>GRUB_HIDDEN_TIMEOUT=0</code><br>
+iii. 修改<code>GRUB_TIMEOUT=0.01</code><br>
+iv. <code>sudo update-grub</code><br>
+v.重启电脑 <code>sudo shutdown -r now</code></p>
+<p>如在将来操作中遇到开机进入Ubuntu系统黑屏的情况，只需要在Windows系统下使用EasyBCD删除Ubuntu启动项条目，再重复上述添加启动项的操作即可恢复进入。</p>
+<ol start="12">
+<li>输入用户密码</li>
+</ol>
+<figure data-type="image" tabindex="26"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_27.png" alt="" loading="lazy"></figure>
+<ol start="13">
+<li>enjoy！</li>
+</ol>
+<figure data-type="image" tabindex="27"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_28.png" alt="" loading="lazy"></figure>
+<h2 id="卸载">卸载</h2>
+<p>如果有需要卸载双系统的需求，可通过以下操作实现：<br>
+i. 下载软件：<a href="http://www.diskgenius.cn/download.php">diskgenius</a><br>
+ii. 删除Ubuntu系统使用的几个分区（包括EFI分区），注意不要删除Windows的EFI分区<br>
+<img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E33/E33_29.png" alt="" loading="lazy"><br>
+若不确定Ubuntu相关分区，可通过【Windows+X】 选择磁盘管理，通过分区大小进行对比判断。<br>
+iii. 删除磁盘分区后，使用EasyBCD删除Ubuntu启动项条目即可。</p>
+<h2 id="参考文献">参考文献</h2>
+<p><a href="https://blog.csdn.net/flyyufenfei/article/details/79187656">Windows + Ubuntu 16.04 双系统安装详细教程</a><br>
+<a href="https://blog.csdn.net/weixin_38233274/article/details/80777805">（MBR模式）Win10下安装Ubuntu18.04双系统</a><br>
+<a href="https://blog.csdn.net/jdigiteer/article/details/53558422">电脑开机出现error: no such partition...的解决办法</a><br>
+<a href="https://www.cnblogs.com/greatfish/p/8041901.html">解决ubuntu开机进入grub界面的问题</a><br>
+<a href="https://blog.csdn.net/guikunchen/article/details/88077330">在win10+Ubuntu双系统下，完美卸载Ubuntu</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[二十二岁]]></title>
+        <id>http://azha.fun/post/二十二岁/</id>
+        <link href="http://azha.fun/post/二十二岁/">
+        </link>
+        <updated>2019-10-31T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>好久没有更新博客了..</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>好久没有更新博客了..</p>
+<!--more-->
+<p>转眼间来到了二十二岁这个节点，这个在很多人看来，已经是完全要承担社会责任的年纪了。<br>
+很奇怪，近年来对很多事物都失去了兴趣，能给自己过生日的朋友也越来越少了，自己也没有了以前那种对生日的期待期待与兴奋的感觉了，更觉得是稀松平常的一天了。<br>
+反思一下自己，上大学以来，对行动的欲望越来越低了，很多事情直到不得不做的时候才会动手去完成，这也许就是拖延症吧，但是我自己不太愿意承认。但是对质量的追求却没有下降，于是心里就会产生很大的落差，毕竟不努力什么也得不到，讨厌自己的是明明知道自己该怎么做，也无数次在心里打滚，站起来，定下目标，又一次次地放弃，选择了一条轻松的道路，但是这条道路，看不到自己想要的未来。<br>
+当然解决的方法超级简单，也没有任何人的成功模板可以参考，就是自己踏实学习技能，踏实实现价值。<br>
+感觉自己审视自己，自己批判自己还是蛮可笑的。<br>
+好想初步实现经济独立，好想能和喜欢的人在一起，好想有个属于自己的家。<br>
+对表达的欲望也下降了好多啊！</p>
+<p>祝自己生日快乐，二十二岁，加油吧！</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[擱淺的藍鯨]]></title>
+        <id>http://azha.fun/post/擱淺的藍鯨/</id>
+        <link href="http://azha.fun/post/擱淺的藍鯨/">
+        </link>
+        <updated>2019-03-06T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>在開學后，避開了台灣旅游的旺季，和女朋友去了一次台灣。<br>
+雖然只是隔海相望，但卻看到了與在大陸截然不同的風光。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在開學后，避開了台灣旅游的旺季，和女朋友去了一次台灣。<br>
+雖然只是隔海相望，但卻看到了與在大陸截然不同的風光。</p>
+<!--more-->
+<h2 id="海">海</h2>
+<p>印象最深的就是太平洋深邃的藍色，卻又不止是藍色。</p>
+<figure data-type="image" tabindex="1"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E31/E31_02.JPG" alt="" loading="lazy"></figure>
+<p>儅你走進看它就偷偷變成了那種漸變的，夾雜著其他夢幻般的顔色的藍色。 穿著拖鞋踩上退潮後的珊瑚礁石，看著身體通透的小魚在小水窪中漫游，在礁石洞中穿來穿去。還有像蜥蜴一樣的，身上汎著金屬色的奇異生物吸附在石壁上，伺機鉆下水去，皮一下那群肆無忌憚的魚兒。海風夾著絲雨，在小水窪中打出漣漪來，嚇得小魚們紛紛鑽入洞中“避雨”。</p>
+<figure data-type="image" tabindex="2"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E31/E31_03.JPG" alt="" loading="lazy"></figure>
+<p>站在一處山崖上，吹著海風，靜靜地望著大海，看海浪慢慢地打在岸邊的礁石上，不去管時間的流逝，漸漸地、漸漸地，你就成了大洋中的一粒水滴，沒有煩惱，沒有想法，隨著海浪一次次慢慢地衝上岩石，又慢慢褪去...</p>
+<figure data-type="image" tabindex="3"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E31/E31_04.JPG" alt="" loading="lazy"></figure>
+<h2 id="夜">夜</h2>
+<p>台灣的夜晚很美麗，也很美味😋</p>
+<p>不管去到哪個城市，總有出名的夜市能滿足我的胃，而且價格都很親民，我們就跟著感覺走，碰運氣找美味，給女朋友一千元，當作今晚的消費額度，往往在都吃撐了之後還有剩餘。只顧著吃吃喝喝，還沒機會給食物拍照，就已經到肚子裏了哈哈。</p>
+<figure data-type="image" tabindex="4"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E31/E31_05.JPG" alt="" loading="lazy"></figure>
+<p>台灣的建築風格更偏日式，也更老舊一些，走在街頭上好像看到了九十年代的縮影。到處能看到從樓上延申出來的廣告牌，到了夜裏，夜幕之下，七彩的熒屏照亮著出行的人們，耳邊響著的是轟鳴而過的機車。不得不提的是，台灣真的有超級多的機車，并且都開得很快，不知道怎麽的，汽車和機車都能在狹窄的道路上飛速行駛著，真是神奇！</p>
+<figure data-type="image" tabindex="5"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E31/E31_06.JPG" alt="" loading="lazy"></figure>
+<p>登上臺北101大廈，因爲剛下過雨，窗外飄著一團團的霧氣，就好像大樓真的插在了雲端之上。過了好久之後，霧團散去，我們的失落之感也隨之散去，往下望去，仿佛看見了這座城市的血脈，靜靜地流淌著城市的活力。</p>
+<figure data-type="image" tabindex="6"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E31/E31_07.JPG" alt="" loading="lazy"></figure>
+<p>去到了九分，才從網路上得知這是千與千尋的取景地之一，白天大雨瓢潑，眼前盡是白茫茫的霧，穿梭在曾經的黃金山城的小巷子裏，和熙熙攘攘的美食街無異，也能吃到不少民俗房東推薦的美味。感覺這才是台灣人口密度最大的地方哈哈，大家撐著傘、披著雨衣摩擦著對方經過，真有點千與千尋的畫面感。這座縣城醒著的時間很短，商鋪們早早地就打了烊，游客也不到白天的十分之一了，到了九點，徹底安靜。在挂滿了紅燈籠的街道裏穿著，偶爾能看到和我們一樣好奇的游客在這裏探秘，看著彼此都好似動畫裏的小妖怪，別有一番風味。</p>
+<h2 id="靈">靈</h2>
+<p>台灣的生態特別好，經常能看到大朵大朵的、真正的白雲。而且因爲台灣人口也許並不多的緣故，當你坐上穿梭於城市之間的大巴時，你的視野將會十分得開闊，能看到大片的農田，能一直看到遠處的山脈，還有籠罩在上頭的雲層。</p>
+<figure data-type="image" tabindex="7"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E31/E31_08.JPG" alt="" loading="lazy"></figure>
+<p>在台灣還能看到很多小動物，而且都能感受到人們對他們的那種愛，似乎每一隻動物，都在人類的居住地有一個傢，悠然自得。</p>
+<figure data-type="image" tabindex="8"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E31/E31_09.JPG" alt="" loading="lazy"></figure>
+<p>在台灣看到的狗幾乎都是黑色的，并且好像都是同一個品種。看著他們有一種説不出的親切感，後來才知道，這些狗應該都是台灣本地的黑狗，感覺他們身上好像還有一點狼性嘿嘿🐺</p>
+<figure data-type="image" tabindex="9"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E31/E31_10.JPG" alt="" loading="lazy"></figure>
+<h2 id="行">行</h2>
+<p>坐船去的台灣，坐飛機回的大陸，在台灣期間嘗試了各種各樣的交通工具，公交、捷運、出租車、拼車、高鐵、火車、臺鐵、電瓶車都成了我們的代步工具。值得一提的是台灣鐵路上的便當非常的好吃，而且價格便宜到感人，完敗大陸的鐵路盒飯。台灣的出租車不便宜，可以在便利店拜托幫忙叫車，我非常喜歡台灣出租車司機十分正式的穿著，給人一種端正的感覺，但你一旦坐上車后，嘿嘿，就感受飛馳人生吧！</p>
+<figure data-type="image" tabindex="10"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E31/E31_11.JPG" alt="" loading="lazy"></figure>
+<p>在返程的飛機上雖然有點疲憊了，但是還是因爲飛機在雲端上的美景而興奮不已，飛機拔高穿過雲層，是另外一個晴朗的世界，一眼不見下方陰鬱的世界。飛機貼著大陸的海岸綫往北飛行，我第一次真正意義上地看到了地平綫，那是一條光消失的綫，依次分隔著天空、陸地、海洋。啊，人類真的是太渺小了哇！</p>
+<figure data-type="image" tabindex="11"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E31/E31_12.JPG" alt="" loading="lazy"></figure>
+<h2 id="念">念</h2>
+<p>台灣人的禮儀給我的印象十分深刻。我曾因爲手裏握著一個喝儘的奶茶杯、在街上找不到一個垃圾桶而崩潰，太佩服台灣人民維持環境衛生的能力。我還十分享受那種人們互相道謝的感覺，就好似人們互相扶持，大家都是彼此生活添彩的一筆。回來之後，立馬就能感受到大陸人的冷漠，這在帝都感覺更甚，畢竟這裏已經成爲了大家淘金的城市，彼此的眼裏，只有利益而已。當然，文字表達出來的不到我腦海中台灣的百分之一，若是有機會，我一定再去幾次這個可愛的、溫馨的、舒適的海島兜兜轉轉——騎著機車🌴</p>
+<figure data-type="image" tabindex="12"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E31/E31_13.JPG" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[2018年度复盘]]></title>
+        <id>http://azha.fun/post/2018年度复盘/</id>
+        <link href="http://azha.fun/post/2018年度复盘/">
+        </link>
+        <updated>2018-12-30T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>2018年只剩不到6个小时了，转眼马上就要迎来2019年了。<br>
+回头看我的2018年，有过充实的时光，有过空虚的时光，想要继续怀着积极的心态前行，还是复盘一下这一年的经历吧。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>2018年只剩不到6个小时了，转眼马上就要迎来2019年了。<br>
+回头看我的2018年，有过充实的时光，有过空虚的时光，想要继续怀着积极的心态前行，还是复盘一下这一年的经历吧。</p>
+<!--more-->
+<h2 id="一">一</h2>
+<p>女朋友提前回到家里，一人在北京准备期末考试，大三上学期第一次用力拉分，为争取保研名额做出努力。报名了美赛，看了一些之前比赛得奖的论文，看了算法，还有学习了Latex，前期小小准备了一手。还和朋友们在北京享受了冰雪的乐趣。</p>
+<h2 id="二">二</h2>
+<p>紧锣密鼓地准备和参加美赛，虽然我们的队伍阵容不是最好的，但是我们的确拿出了最积极的心态和最认真的态度去完成题目要求地讨论以及提交了我们的论文。回到家里享受短短十几天的假期，见了几个朋友，回一中打了一场球，算是完成了一场仪式。</p>
+<h2 id="三">三</h2>
+<p>大三下学期很快就开始了，心态一直很不积极。课程内容枯燥无聊并且很水，大部分时间都呆在了宿舍无所事事。</p>
+<h2 id="四">四</h2>
+<p>美赛出结果了，我们队伍拿了我们认识的人之间最好的成绩——M奖，看到了保研的希望。迎来了夏天，心态好转，还出去骑了车。</p>
+<h2 id="五">五</h2>
+<p>心态如过山车般又来到了谷底，为了缓和自己的心态，好多次和校三队一起出去宵夜，发现人类真的不能缺少社交，要不就会陷入孤寂的痛苦漩涡中。</p>
+<h2 id="六">六</h2>
+<p>鼓足勇气走出校园，参加了全国大学生铁人三项比赛，拿了很次的成绩，但是真的给了自己一个很好的交代。大三下学期成绩出来了，在心态面临崩溃边缘的情况下，保住了自己的加权。</p>
+<h2 id="七">七</h2>
+<p>2018年过去了一半。小学期开始了，真真正正地沉浸在机房里面写代码，能和队友一起写代码，完成任务的感觉十分充实。认真准备几场面试，最后选择了埃森哲，不管是待遇还是出行等，都是我最好选择，七月份是我一年内最充实最饱满的一个月份了。</p>
+<h2 id="八">八</h2>
+<p>签下了实习协议，开始了我的实习经历。和洪队一起出门骑车，真心感受到了身边的人对你的好，也真真佩服和暗自欢喜身边有这么多优秀的榜样。</p>
+<h2 id="九">九</h2>
+<p>获得了人生第一笔工资。和校三队大部分朋友一起吃了顿都很开心的饭，提交了保研材料，获得保研名额。参加面试，保研工大。</p>
+<h2 id="十">十</h2>
+<p>结束实习。回到家里，回了老家，大海的感觉真好。</p>
+<h2 id="十一">十一</h2>
+<p>21岁。骑车出门追了次秋天。</p>
+<h2 id="十二">十二</h2>
+<p>女朋友还有身边的人都在准备考研或者其他考试，能切实地感受到压力。考研结束，和女朋友去了一直在清单上的故宫，赶上了好天气，很冷的那种漂亮。搬到女朋友姐姐家里，体验同居生活，同居好难，在北京生活也好难，但是幸好身边还有人陪着。</p>
+<h2 id="2019">2019</h2>
+<p>新的一年，大家要继续努力呀！</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[打破Git 操作的速度限制]]></title>
+        <id>http://azha.fun/post/打破Git 操作的速度限制/</id>
+        <link href="http://azha.fun/post/打破Git 操作的速度限制/">
+        </link>
+        <updated>2018-09-19T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>近日越发觉得GitHub 是个好东西，但是在进行Git 一系列操作的时候，会发现，下载的速度只有无奈的几十 KiB/s，当你尝试下载一个容量不小的仓库时，就只能等着哭了。<br>
+Azha 就是经过一些折腾，终于将速度提升到了感人的10MiB/s 👌</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>近日越发觉得GitHub 是个好东西，但是在进行Git 一系列操作的时候，会发现，下载的速度只有无奈的几十 KiB/s，当你尝试下载一个容量不小的仓库时，就只能等着哭了。<br>
+Azha 就是经过一些折腾，终于将速度提升到了感人的10MiB/s 👌</p>
+<!--more-->
+<p><strong>本文实践的操作环境：Win10</strong></p>
+<h2 id="操作">操作</h2>
+<p>首先的必要条件就是你的电脑中安装了科学上网的工具，并且配置好了可用的VPN（如果你需要建立自己的VPN，<a href="http://azha.fun/2018/03/07/Azha%20climb%20over%20the%20GFW/">点击这里</a>）。<br>
+接下来就是打开命令提示符工具，输入以下两行命令</p>
+<pre><code>git config --global http.proxy socks5://127.0.0.1:1080 
+git config --global https.proxy socks5://127.0.0.1:1080
+</code></pre>
+<p>配置好之后，在使用Git 操作时，保持Shadowsocks 客户端开启就行了~<br>
+科学上网的工具的本地端口默认是1080（有的是10808，格局实际情况而定），上面设置只是开启https 代理。大概的意思就是从GitHub 上clone 仓库时，使用的是科学上网的工具 的socks5 协议，至于socks5 的具体内容，属于计算机网络的范畴，感兴趣的可以自己面向搜索引擎查阅 👍<br>
+git 仓库有的在国内有的在国外，国内的有gitcafe、coding.net、开源中国git …所以用国内的就没必要设置了，反而会慢。</p>
+<p>体验一下飞升的速度！</p>
+<figure data-type="image" tabindex="1"><img src="https://blog-1254046656.cos.ap-beijing.myqcloud.com/E29/E29_02.png" alt="" loading="lazy"></figure>
+<p>Happy Coding！</p>
+<h2 id="取消配置">取消配置</h2>
+<p>如果你哪天突然不想使用此操作了，在命令提示符工具中，输入以下两行命令即可</p>
+<pre><code>git config --global --unset http.proxy
+git config --global --unset https.proxy
+</code></pre>
+<p>不过我觉得谁不喜欢高速下载呢 🤩</p>
+<h2 id="参考">参考</h2>
+<p><a href="https://blog.csdn.net/MENGHUANBEIKE/article/details/74001756">git clone下载速度很慢的解决方法</a><br>
+<a href="https://www.zhihu.com/question/27159393">git clone一个github上的仓库，太慢，经常连接失败，但是github官网流畅访问，为什么？</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[软件工程学费之谜]]></title>
+        <id>http://azha.fun/post/软件工程学费之谜/</id>
+        <link href="http://azha.fun/post/软件工程学费之谜/">
+        </link>
+        <updated>2018-09-12T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>大学不知不觉过去了三年，成为了一枚大四老人，也对国家示范性软件学院下的软件工程（实验班）高昂的学费有了点疑惑。于是在网上大肆搜索，综合了一些比较有说服力的观点，开阔下视野👀</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>大学不知不觉过去了三年，成为了一枚大四老人，也对国家示范性软件学院下的软件工程（实验班）高昂的学费有了点疑惑。于是在网上大肆搜索，综合了一些比较有说服力的观点，开阔下视野👀</p>
+<!--more-->
+<h2 id="opinion-i">OPINION I</h2>
+<p>学费高的是示范性软件学院，是工程教育，教材为英文原版，从软件企业外聘专家工程师授课，大三大四以实习为主，软件学院是由于国家所确定的国家示范性软件学院的全新办学模式，国家出台大力扶持软件学院的特殊政策的目的是，以跨越式发展模式实现推动我国软件产业人才的培养水平和规模。国家对软件学院的政策是很宽松的，允许软件学院依据成本收取学费，而软件学院的模式成本很大，所以费用也就很高了。</p>
+<p><strong>我不成熟的一些小看法：</strong><br>
+一部分课程是双语教学，但其实考虑到有些同学的英语底子并不扎实，其实也只是形式化地介绍几个英文的专业名词，主要为中文教学。据我所知的外聘专家质量良莠不齐，有的是真的资质丰富，上课模式偏理论，主要是开阔了他历任专家的经历，并提出一点见解。然而有的教师并不关心学生的学习状况，点个名让学生自己操作了，给分看心情，主要精力花在了如何让自己的利益最大化上，这一点让真正渴望获得知识的学生十分地不甘。对于软件学院依据成本收取学费，至少在硬件方面没有切实体会到，倒是隔壁地数字媒体专业用上了最先进的硬件设备，还有专门的苹果机房，好生羡慕呀。</p>
+<h2 id="opinion-ii">OPINION II</h2>
+<p>软件学院是20世纪初教育产业化的产物。国家当时在一些大学试点建立软件学院和开设软件工程专业，其思路就是教学与实践相结合。作为教育体制改革的试点，软件学院要自主承担相当多的费用，而不像传统专业那样主要由国家支持。实际上那几年所有学校所有专业的学费都有比较大的涨辐，软件学院步子迈得比较大而已。教育产业化火了没几年，弄得怨声载道，这个概念也渐渐不再被人提起了。但软件学院的学费当初国家有出台政策，全国基本是有统一标准的，也就一直被沿袭下来。</p>
+<p><strong>我不成熟的一些小看法：</strong><br>
+那这能算是历史遗留问题咯🤣</p>
+<h2 id="opinion-iii">OPINION III</h2>
+<p>并不是所有的软件工程都贵，一般软件工程学费和其他专业一样，贵的是一些所谓的“国家示范性”软件学院，确实实践机会多，大四一年没课，空出来实习，肯定实践多。但是大四也要交学费。还有一些所谓的双语授课，其实感觉很坑，大部分的课都是中文讲+英文的PPT，这就是“双语”。学软件工程的好处是，比其他学院的学生多半年以上的实习时间，以后找工作会有优势。</p>
+<p><strong>我不成熟的一些小看法：</strong><br>
+这一点的确中肯，这样看来，1w6的学费的确不到一年能够回本，大四一年还有学校低廉的生活成本支持着，但是本科大四待毕业生的身份出去找工作的话，的确是一个比较尴尬的局面（如果还想继续深造研究生的话）。</p>
+<h2 id="opinion-iv">OPINION IV</h2>
+<p>1: 用的是英文教材，有的学校使用的原版的，所以会贵<br>
+2: 可能是请的外教<br>
+3: 实习的实验室比较昂贵，并且机会不好找的，所以学校在这方面一般投入较大（但是也有学校很不负责的用电脑房代替）<br>
+4: 出路好学费就自然高咯</p>
+<p><strong>我不成熟的一些小看法：</strong><br>
+强烈赞成第三点！！！（括号里的部分）</p>
+<h2 id="opinion-v">OPINION V</h2>
+<p>软件工程专业是新兴热门专业，而且大多聘请外专业或校外老师授课，所以在大多数高校中收费都比较高。<br>
+按学分计算就是说按照专业所修总学分计算学费，一个学分X元，四年总共应修N学分需要交的学费就是N*X元。</p>
+<p>关于软件学院和学费问题，完全是由于国家所确定的国家示范性软件学院的全新办学模式，而国家出台大力扶持软件学院的特殊政策的目的就是，以跨越式发展模式实现推动我国软件产业人才的培养水平和规模。<br>
+软件学院的培养方式和办学模式符合社会需求，注重学生工程实践能力的培养，符合社会的真实需求。特别是软件学院全力加强与各大跨国公司在人才培养、实习就业方面的紧密合作，为学生带来了大量机会，同理6-10个月的全职实习模式，在很大程度上发挥了重要作用。<br>
+关于学费的问题，这不是短期内所能改变的（这也不是学院单方面所能改变的）。<br>
+大家都知道，按国家成立示范性软件学院的有关文件指示，所有的软件学院都采用一种全新的办学模式。但国家只有支持软件学院的特殊政策，但从来没有为软件学院投入一分钱（包括一分贷款也没有），完全没有。</p>
+<p><strong>我不成熟的一些小看法：</strong><br>
+就我们专业我们方向而言，唯一接触到的外教是英语课上.. 学分嘛，学费高，但是需要修的学分反而却比别的学院少（我从未如此热爱学习😂）。实习还不是自己找！学校合作的企业没有特别理想的，甚至还有给派只做Excel 表格话的公司，不知道大学前三年接收教育的价值何处体现。还有就是国家这种政策更像是把软件学院当作一个私立学院看待，这种形势下的教育很有可能会出现利益为目的的漏洞，又没有很好的监管，受害的理所当然还是学生咯。</p>
+<h2 id="opinion-vi">OPINION VI</h2>
+<p>本来这个问题不成立。这个没什么为什么。软件工程学院要赚钱，老师要工资。<br>
+有些人回答就业优势，前途好。这个是骗子的说法。<br>
+因为你学C ，跟计算机科学专业学费5000左右的是一样的。 别告诉我说配置个php环境，就是软件工程比计算机专业更容易学会。<br>
+如果学软件，肯定是学计算机专业或者理工类的，数学专业的，然后学C语言。<br>
+你如果学美工，肯定是学美术专业，而不是学什么软件多媒体制作，呵呵。<br>
+软件工程这些骗子们，为了赚钱而已。</p>
+<p><strong>我不成熟的一些小看法：</strong><br>
+emmmmmmmmmm🙃（内心的小声音）</p>
+<h2 id="我再比比两句">我再比比两句</h2>
+<p>学费问题，作为一个学生不能计较这么多，再不济还有各式各样的助学金，不会到上不起学的地步。这篇博文呢只为博君一览，相信各位的实力，在一年之内就能赚出四年学费的~<br>
+欢迎各位科学上网，留言区友好谈论👍</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[One Month in Accenture]]></title>
+        <id>http://azha.fun/post/One Month in Accenture/</id>
+        <link href="http://azha.fun/post/One Month in Accenture/">
+        </link>
+        <updated>2018-08-30T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>七月底有幸入职世界最大的咨询公司<strong>accenture</strong>，不知不觉加入埃森哲实习已有一个多月了，逐渐进入紧张的业务上线阶段，身为IT 民工实习生的我也不能免去连续多天加班到十点的命运。负责的部分是伊利主数据系统的企业服务总线(Enterptise Service Bus)的数据处理和下游子系统的对接。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>七月底有幸入职世界最大的咨询公司<strong>accenture</strong>，不知不觉加入埃森哲实习已有一个多月了，逐渐进入紧张的业务上线阶段，身为IT 民工实习生的我也不能免去连续多天加班到十点的命运。负责的部分是伊利主数据系统的企业服务总线(Enterptise Service Bus)的数据处理和下游子系统的对接。</p>
+<!--more-->
+<h2 id="吐槽">吐槽</h2>
+<p>在零基础接触到OSB 的情况下，我的第一反应是毫无头绪，以至于受到了老大的连环质问——“你到底理解了没有？”，于是我的内心OS 就是“这玩意谁会啊！”<br>
+OSB作为一个超级好用的大型系统，在中国的本地化做的十分的差劲！只有少数大型企业才会用到这个系统，在中国的资料少之又少，在京东上看到的图书信息只有全英文的，均价在800+，幸运地在Google 上找到了OSB 学习资料的电子版图书。接触到这个技术的最大感想就是，<strong>没有掌握技术就只能受制于人</strong>。项目组原计划请外面的人员对我们的项目进行支援，但是这个外援极不靠谱，基本上OSB部分的开发和修整工作主要由我和一位学弟完成。这个技术顾问在教授我们相关知识的时候，支支吾吾，有点不大乐意的感觉，这种体验十分的不舒适。<br>
+但是在多次实践之后，每次新的系统需要对接时，便能很快地完成对接，OSB 本身还是很强大的~</p>
+<h2 id="实习">实习</h2>
+<h3 id="新收获">新收获🎊</h3>
+<ol>
+<li>XML<br>
+1.1 XPath<br>
+1.2 XSD<br>
+1.3 XQuery</li>
+<li>Web Service<br>
+2.1 wsdl<br>
+2.2 Soap</li>
+<li>OSB 企业服务总线<br>
+3.1 Web Logic Server</li>
+<li>Oracle Stored Procedure<br>
+4.1 Package</li>
+<li>OSB服务的部署、发布与测试<br>
+5.1 数据源</li>
+<li>理解需求的能力</li>
+<li>和客户的交流能力</li>
+<li>学到一半的Spring</li>
+</ol>
+<h3 id="遇到的奇葩问题">遇到的奇葩问题😵</h3>
+<h4 id="安装软件事中文的乱码问题">安装软件事中文的乱码问题</h4>
+<p>中文乱码问题是安装软件时最烦的一个问题了，出现一堆乱码谁都看不懂，网上只有一堆一样的问题却没有解决方法。这时候，你需要的是知道弹窗问题的内容，于是，我把系统的显示语言修改成了英文，于是我就发现了问题的原因是不能正确地找到jre下的javaw.exe，依靠多年安装软件的经验，我猜测是我安装Java时，路径中含有空格（Program Files），这是一个大坑！于是我把Java移到盘根目录下，修改Java_Home，成功解决问题！卡在中文乱码的解决上约两小时，解决问题两分钟。本地化支持太差劲，这是Oracle庞大软件系统的一个通病。</p>
+<h4 id="那些含糊不清的文档">那些含糊不清的文档</h4>
+<p>尽信文档不如没有文档，在技术顾问提供给我的一份安装文档时，我按照文档完成了安装，去发现目录下缺少了一个必需的示例目录，这个问题在翻阅了百度、Google，从12年教程看到18年，中文看到英文，都没能找到这个问题的根源。合理推测是文档中的默认安装步骤缺少了一些步骤，于是我把装好的Oracle Service Bus卸载，重新安装，并仔细阅读每一步的作用，发现了的确这个示例目录需要定制安装而不是典型安装，解决问题！</p>
+<h4 id="开放式办公">开放式办公</h4>
+<p>现在的职场基本都采用了开放式办公的场景布置，一来能够节省办公成本，二来也增进了员工之间的亲密度和沟通。但是，作为一名还没脱离校园的学生，给我的一种感觉就好像位于一间大教室，大家都在自习，偶尔会有一些学霸认真地讨论问题，但是老师一走之后，“教室”里就跟揭开了锅一样，叽里呱啦就聊开了😂</p>
+<h4 id="需求不明确">需求不明确</h4>
+<p>埃森哲并不属于典型的技术型公司，对于需求的分析并不能达到开发的要求，以至于在开发的过程中往往会发现很多在需求阶段就应该解决的问题，而且项目前期需求花了14周，真正留给开发的时间只有7周。刚开始入职的时候，技术人员只有我和我的老大加上外包，一共四人，吓哭我了，好在后来陆陆续续调来了一些技术人员支持，还有加班总算是赶上了一些进度，但整体还是挺紧张的。</p>
+<h2 id="一些心里话">一些心里话</h2>
+<p>刚开始到公司的时候，不知道要做什么，实习生就是哪里缺人补哪里，于是我就开始了OSB 零基础的学习以及快速投入工作。接触一门生技术时是有点难受，但在后面熟悉之后，并能快速完成业务需求并能够提出自己的想法的时候，这种感觉还是很不错的，能够在工作中有参与感、成就感。埃森哲（我们项目组）的老板们还是很亲民的，提供了给力的后勤，并且能够放下架子和员工们一起工作。和我一起的实习生们也都很上进，怀揣着自己的梦想加入了这个项目。这些都是一个有活力的项目组应该有的样子💪。</p>
+]]></content>
+    </entry>
+</feed>
