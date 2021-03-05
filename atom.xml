@@ -2,14 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://azha.fun</id>
     <title>Azha&apos;s Blog</title>
-    <updated>2020-11-08T10:23:43.489Z</updated>
+    <updated>2021-03-05T16:17:18.399Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://azha.fun"/>
     <link rel="self" href="http://azha.fun/atom.xml"/>
     <subtitle>平平无奇</subtitle>
     <logo>http://azha.fun/images/avatar.png</logo>
     <icon>http://azha.fun/favicon.ico</icon>
-    <rights>All rights reserved 2020, Azha&apos;s Blog</rights>
+    <rights>All rights reserved 2021, Azha&apos;s Blog</rights>
     <entry>
         <title type="html"><![CDATA[在 Windows 上构建 Airsim]]></title>
         <id>http://azha.fun/post/在 Windows 上构建 Airsim/</id>
@@ -322,7 +322,7 @@ python ./examples/toy_example/run_toy_example.py 10000 10000 0
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[搭建用于无人驾驶强化学习的环境]]></title>
+        <title type="html"><![CDATA[搭建用于无人驾驶学习的TORCS环境]]></title>
         <id>http://azha.fun/post/搭建用于无人驾驶强化学习的环境/</id>
         <link href="http://azha.fun/post/搭建用于无人驾驶强化学习的环境/">
         </link>
