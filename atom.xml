@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://azha.fun</id>
+    <id>https://azha.fun</id>
     <title>Azha&apos;s Blog</title>
-    <updated>2021-03-13T13:02:52.652Z</updated>
+    <updated>2021-06-01T07:40:52.888Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://azha.fun"/>
-    <link rel="self" href="http://azha.fun/atom.xml"/>
+    <link rel="alternate" href="https://azha.fun"/>
+    <link rel="self" href="https://azha.fun/atom.xml"/>
     <subtitle>平平无奇</subtitle>
-    <logo>http://azha.fun/images/avatar.png</logo>
-    <icon>http://azha.fun/favicon.ico</icon>
+    <logo>https://azha.fun/images/avatar.png</logo>
+    <icon>https://azha.fun/favicon.ico</icon>
     <rights>All rights reserved 2021, Azha&apos;s Blog</rights>
     <entry>
         <title type="html"><![CDATA[在 Windows 上构建 Airsim]]></title>
-        <id>http://azha.fun/post/在 Windows 上构建 Airsim/</id>
-        <link href="http://azha.fun/post/在 Windows 上构建 Airsim/">
+        <id>https://azha.fun/post/在 Windows 上构建 Airsim/</id>
+        <link href="https://azha.fun/post/在 Windows 上构建 Airsim/">
         </link>
         <updated>2020-11-06T05:45:05.000Z</updated>
         <summary type="html"><![CDATA[<p>AirSim是一个基于虚幻引擎的无人机、汽车及其他交通工具的仿真模拟器。它是开源的、跨平台的，支持使用流行的飞行控制器进行软件在环仿真，以及硬件在环仿真，以实现物理和视觉上的逼真仿真。</p>
@@ -79,8 +79,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[FATE单机部署指南]]></title>
-        <id>http://azha.fun/post/FATE单机部署指南/</id>
-        <link href="http://azha.fun/post/FATE单机部署指南/">
+        <id>https://azha.fun/post/FATE单机部署指南/</id>
+        <link href="https://azha.fun/post/FATE单机部署指南/">
         </link>
         <updated>2020-10-30T09:54:23.000Z</updated>
         <summary type="html"><![CDATA[<p>FATE (Federated AI Technology Enabler) 是微众银行AI部门发起的开源项目，为联邦学习生态系统提供了可靠的安全计算框架。FATE项目使用多方安全计算 (MPC) 以及同态加密 (HE) 技术构建底层安全计算协议，以此支持不同种类的机器学习的安全计算，包括逻辑回归、基于树的算法、深度学习和迁移学习等。</p>
@@ -220,8 +220,8 @@ python ./examples/toy_example/run_toy_example.py 10000 10000 0
     </entry>
     <entry>
         <title type="html"><![CDATA[博客迁移 HEXO→Gridea]]></title>
-        <id>http://azha.fun/post/博客迁移 HEXO→Gridea/</id>
-        <link href="http://azha.fun/post/博客迁移 HEXO→Gridea/">
+        <id>https://azha.fun/post/博客迁移 HEXO→Gridea/</id>
+        <link href="https://azha.fun/post/博客迁移 HEXO→Gridea/">
         </link>
         <updated>2020-10-26T03:40:57.000Z</updated>
         <summary type="html"><![CDATA[<p>无意间在我的订阅收藏里看到一篇关于轻量化博客应用的文章，仔细阅读之后狂喜——这不就是我想要的轻量化博客写作客户端嘛！于是花费了几个小时完成了博客从HEXO到Gridea的迁移工作</p>
@@ -268,8 +268,8 @@ python ./examples/toy_example/run_toy_example.py 10000 10000 0
     </entry>
     <entry>
         <title type="html"><![CDATA[浅谈联邦学习]]></title>
-        <id>http://azha.fun/post/浅谈联邦学习/</id>
-        <link href="http://azha.fun/post/浅谈联邦学习/">
+        <id>https://azha.fun/post/浅谈联邦学习/</id>
+        <link href="https://azha.fun/post/浅谈联邦学习/">
         </link>
         <updated>2020-10-15T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>在人工智能领域，传统的数据处理模式往往是一方收集数据，再转移到另一方进行处理、清洗并建模，最后把模型卖给第三方。但随着法规完善和监控愈加严格，如果数据离开收集方或者用户不清楚模型的具体用途，运营者都可能会触犯法律。数据是以孤岛的形式存在的，解决孤岛的直接方案就是把数据整合到一方进行处理。但是，现在这样做很可能是违法的，因为法律不允许运营者粗暴地进行数据聚合。如何合法地解决数据孤岛问题应该引起人工智能学者和从业者的深思，因为大数据面临的这个困境很可能就是导致人工智能下一个冬天的导火线。</p>
@@ -323,8 +323,8 @@ python ./examples/toy_example/run_toy_example.py 10000 10000 0
     </entry>
     <entry>
         <title type="html"><![CDATA[搭建用于无人驾驶学习的TORCS环境]]></title>
-        <id>http://azha.fun/post/搭建用于无人驾驶强化学习的环境/</id>
-        <link href="http://azha.fun/post/搭建用于无人驾驶强化学习的环境/">
+        <id>https://azha.fun/post/搭建用于无人驾驶强化学习的环境/</id>
+        <link href="https://azha.fun/post/搭建用于无人驾驶强化学习的环境/">
         </link>
         <updated>2020-04-04T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>本文整理了在Ubuntu 16.04操作系统环境下，搭建适用于TORCS(The Open Racing Car Simulator)无人驾驶仿真平台的强化学习环境。包括Ubuntu 16.04更换NVIDIA显卡驱动、安装CUDA、cuDNN、TensorFlow GPU加速版本以及Gym-TORCS.</p>
@@ -433,8 +433,8 @@ torcs
     </entry>
     <entry>
         <title type="html"><![CDATA[Ubuntu 16.04 更换安装源合集]]></title>
-        <id>http://azha.fun/post/Ubuntu 16.04 更换安装源合集/</id>
-        <link href="http://azha.fun/post/Ubuntu 16.04 更换安装源合集/">
+        <id>https://azha.fun/post/Ubuntu 16.04 更换安装源合集/</id>
+        <link href="https://azha.fun/post/Ubuntu 16.04 更换安装源合集/">
         </link>
         <updated>2020-04-01T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>每当需要通过命令行下载一些软件包的时候，下载的速度往往不那么如意，我们可以通过更换到国内安装源以提升下载和安装的速度，以此博文整理在Ubuntu 16.04 操作系统下一些常用的更换安装源的操作。</p>
@@ -514,8 +514,8 @@ trusted-host = mirrors.aliyun.com
     </entry>
     <entry>
         <title type="html"><![CDATA[Win 10环境安装Ubuntu 16.04双系统]]></title>
-        <id>http://azha.fun/post/Win 10环境安装Ubuntu 16.04双系统/</id>
-        <link href="http://azha.fun/post/Win 10环境安装Ubuntu 16.04双系统/">
+        <id>https://azha.fun/post/Win 10环境安装Ubuntu 16.04双系统/</id>
+        <link href="https://azha.fun/post/Win 10环境安装Ubuntu 16.04双系统/">
         </link>
         <updated>2020-03-31T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>在学习的过程中，难免会遇到需要安装双系统的情况，因为之前安装的双系统版本过于新，导致很多软件不能得到很好的支持，于是卸载了原有版本的双系统之后，重新安装了一遍双系统，并以此博文记录，避免之后再次踩坑。</p>
@@ -678,8 +678,8 @@ iii. 删除磁盘分区后，使用EasyBCD删除Ubuntu启动项条目即可。</
     </entry>
     <entry>
         <title type="html"><![CDATA[二十二岁]]></title>
-        <id>http://azha.fun/post/二十二岁/</id>
-        <link href="http://azha.fun/post/二十二岁/">
+        <id>https://azha.fun/post/二十二岁/</id>
+        <link href="https://azha.fun/post/二十二岁/">
         </link>
         <updated>2019-10-31T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>好久没有更新博客了..</p>
@@ -698,8 +698,8 @@ iii. 删除磁盘分区后，使用EasyBCD删除Ubuntu启动项条目即可。</
     </entry>
     <entry>
         <title type="html"><![CDATA[擱淺的藍鯨]]></title>
-        <id>http://azha.fun/post/擱淺的藍鯨/</id>
-        <link href="http://azha.fun/post/擱淺的藍鯨/">
+        <id>https://azha.fun/post/擱淺的藍鯨/</id>
+        <link href="https://azha.fun/post/擱淺的藍鯨/">
         </link>
         <updated>2019-03-06T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>在開學后，避開了台灣旅游的旺季，和女朋友去了一次台灣。<br>
@@ -743,8 +743,8 @@ iii. 删除磁盘分区后，使用EasyBCD删除Ubuntu启动项条目即可。</
     </entry>
     <entry>
         <title type="html"><![CDATA[2018年度复盘]]></title>
-        <id>http://azha.fun/post/2018年度复盘/</id>
-        <link href="http://azha.fun/post/2018年度复盘/">
+        <id>https://azha.fun/post/2018年度复盘/</id>
+        <link href="https://azha.fun/post/2018年度复盘/">
         </link>
         <updated>2018-12-30T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>2018年只剩不到6个小时了，转眼马上就要迎来2019年了。<br>
